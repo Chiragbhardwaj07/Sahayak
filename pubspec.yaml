@@ -1,0 +1,70 @@
+name: chirag_s_application
+description: A new Flutter project.
+version: 1.0.0+1
+environment: 
+  sdk: '>=2.17.0 <3.0.0'
+dependencies: 
+  flutter: 
+    sdk: flutter
+  flutter_localizations: 
+    sdk: flutter
+  provider: ^6.0.5
+  cached_network_image: ^3.2.1
+  flutter_svg: ^1.1.6
+  connectivity_plus: ^2.3.6
+  shared_preferences: ^2.2.2
+  pin_code_fields: ^7.3.0
+  sms_autofill: ^2.0.0
+  intl: ^0.18.0
+  fluttertoast: ^8.2.4
+  http: ^1.1.2
+  another_flushbar: ^1.12.30
+dev_dependencies: 
+  flutter_test: 
+    sdk: flutter
+flutter: 
+  uses-material-design: true
+  assets: 
+    - assets/
+    - assets/images/
+  fonts: 
+    - family: Poppins
+      fonts: 
+        - asset: assets/fonts/PoppinsRegular.ttf
+          weight: 400
+        - asset: assets/fonts/PoppinsMedium.ttf
+          weight: 500
+        - asset: assets/fonts/PoppinsSemiBold.ttf
+          weight: 600
+    - family: Montserrat
+      fonts: 
+        - asset: assets/fonts/MontserratRomanBold.ttf
+          weight: 700
+        - asset: assets/fonts/MontserratSemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/MontserratRomanSemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/MontserratRomanRegular.ttf
+          weight: 400
+    - family: Manrope
+      fonts: 
+        - asset: assets/fonts/ManropeExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/ManropeSemiBold.ttf
+          weight: 600
+    - family: Rubik
+      fonts: 
+        - asset: assets/fonts/RubikRegular.ttf
+          weight: 400
+        - asset: assets/fonts/RubikRomanMedium.ttf
+          weight: 500
+        - asset: assets/fonts/RubikRomanSemiBold.ttf
+          weight: 600
+    - family: Hind
+      fonts: 
+        - asset: assets/fonts/HindRegular.ttf
+          weight: 400
+    - family: Roboto
+      fonts: 
+        - asset: assets/fonts/RobotoRomanRegular.ttf
+          weight: 400
