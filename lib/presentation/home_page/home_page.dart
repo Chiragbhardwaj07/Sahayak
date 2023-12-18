@@ -36,374 +36,379 @@ class HomePageState extends State<HomePage> {
     mediaQueryData = MediaQuery.of(context);
 
     return SafeArea(
-      child: Scaffold(
-        appBar: _buildAppBar(context),
-        body: SizedBox(
-          width: double.maxFinite,
-          child: ListView(
-            children: [
-              _buildThirtyOne(context, 'Templates'),
-              SizedBox(
-                  height: 300,
+      child: SafeArea(
+        child: Scaffold(
+          appBar: _buildAppBar(context),
+          body: SizedBox(
+            width: double.maxFinite,
+            child: ListView(
+              children: [
+                _buildThirtyOne(context, 'Templates'),
+                SizedBox(
+                    height: 300,
+                    child: ListView(
+                      children: [
+                        SizedBox(
+                            height: 100,
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(
+                                  vertical: 8, horizontal: 15),
+                              child: Card(
+                                child: Row(
+                                  children: [
+                                    SizedBox(
+                                      width: 5,
+                                    ),
+                                    CircleAvatar(
+                                      radius: 24,
+                                      child: Image.asset(
+                                        'assets/images/img_rectangle_11.png',
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 10,
+                                    ),
+                                    Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        SizedBox(
+                                          height: 10,
+                                        ),
+                                        Text(
+                                          'NDA',
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 18,
+                                              color: Colors.black),
+                                        ),
+                                        Text(
+                                            'Create the NDA(Non - Disclosure Agreement \nunder the ICA - 1965')
+                                      ],
+                                    )
+                                  ],
+                                ),
+                              ),
+                            )),
+                        SizedBox(
+                            height: 100,
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(
+                                  vertical: 8, horizontal: 15),
+                              child: Card(
+                                child: Row(
+                                  children: [
+                                    SizedBox(
+                                      width: 5,
+                                    ),
+                                    CircleAvatar(
+                                      radius: 24,
+                                      child: Image.asset(
+                                        'assets/images/img_rectangle_11_48x48.png',
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 10,
+                                    ),
+                                    Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        SizedBox(
+                                          height: 10,
+                                        ),
+                                        Text(
+                                          'Agreement',
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 18,
+                                              color: Colors.black),
+                                        ),
+                                        Text(
+                                            'Create an Agreement for buisness,\nlending ,etc.')
+                                      ],
+                                    )
+                                  ],
+                                ),
+                              ),
+                            )),
+                        SizedBox(
+                            height: 100,
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(
+                                  vertical: 8, horizontal: 15),
+                              child: Card(
+                                child: Row(
+                                  children: [
+                                    SizedBox(
+                                      width: 5,
+                                    ),
+                                    CircleAvatar(
+                                      radius: 24,
+                                      child: Image.asset(
+                                        'assets/images/img_rectangle_11.png',
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 10,
+                                    ),
+                                    Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        SizedBox(
+                                          height: 10,
+                                        ),
+                                        Text(
+                                          'Petition for Bail',
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 18,
+                                              color: Colors.black),
+                                        ),
+                                        Text('Create a bail petition')
+                                      ],
+                                    )
+                                  ],
+                                ),
+                              ),
+                            )),
+                        SizedBox(
+                            height: 100,
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(
+                                  vertical: 8, horizontal: 15),
+                              child: InkWell(
+                                onTap: () {},
+                                child: Card(
+                                  color: Colors.grey[200],
+                                  child: Row(
+                                    children: [
+                                      SizedBox(
+                                        width: 5,
+                                      ),
+                                      CircleAvatar(
+                                        radius: 24,
+                                        child: Image.asset(
+                                          'assets/images/img_rectangle_11_48x48.png',
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        width: 10,
+                                      ),
+                                      Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          SizedBox(
+                                            height: 10,
+                                          ),
+                                          Text(
+                                            'Affidavit',
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 18,
+                                                color: Colors.black),
+                                          ),
+                                          Text(
+                                              'Create an Agreement for buisness,\nlending ,etc.')
+                                        ],
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            )),
+                      ],
+                    )),
+                _buildThirtyOne(context, 'Contact An Expert'),
+                SizedBox(height: 15.v),
+                SizedBox(
+                  height: 150,
                   child: ListView(
+                    scrollDirection: Axis.horizontal,
                     children: [
-                      SizedBox(
-                          height: 100,
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(
-                                vertical: 8, horizontal: 15),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 8),
+                        child: SizedBox(
+                            height: 150,
+                            width: 150,
                             child: Card(
-                              child: Row(
+                              color: Color(0XFFA8D1D1),
+                              child: Column(
                                 children: [
                                   SizedBox(
-                                    width: 5,
+                                    height: 10,
                                   ),
                                   CircleAvatar(
-                                    radius: 24,
-                                    child: Image.asset(
-                                      'assets/images/img_rectangle_11.png',
-                                    ),
-                                  ),
+                                      radius: 38,
+                                      child: Image.asset(
+                                          'assets/images/cons_law.png')),
                                   SizedBox(
-                                    width: 10,
+                                    height: 10,
                                   ),
                                   Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
                                     children: [
-                                      SizedBox(
-                                        height: 10,
-                                      ),
                                       Text(
-                                        'NDA',
+                                        'Constitutional',
                                         style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 18,
-                                            color: Colors.black),
+                                            color: Colors.black,
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w500),
                                       ),
                                       Text(
-                                          'Create the NDA(Non - Disclosure Agreement \nunder the ICA - 1965')
+                                        'Law',
+                                        style: TextStyle(
+                                            color: Colors.black,
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w500),
+                                      ),
                                     ],
                                   )
                                 ],
                               ),
-                            ),
-                          )),
-                      SizedBox(
-                          height: 100,
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(
-                                vertical: 8, horizontal: 15),
+                            )),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 8),
+                        child: SizedBox(
+                            height: 150,
+                            width: 150,
                             child: Card(
-                              child: Row(
+                              color: Color(0XFFDFEBEB),
+                              child: Column(
                                 children: [
                                   SizedBox(
-                                    width: 5,
+                                    height: 10,
                                   ),
                                   CircleAvatar(
-                                    radius: 24,
-                                    child: Image.asset(
-                                      'assets/images/img_rectangle_11_48x48.png',
-                                    ),
-                                  ),
+                                      radius: 40,
+                                      child: Image.asset(
+                                          'assets/images/criminal_law.png')),
                                   SizedBox(
-                                    width: 10,
+                                    height: 10,
+                                  ),
+                                  Text(
+                                    'Criminal Law',
+                                    style: TextStyle(
+                                        color: Colors.black,
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w500),
+                                  )
+                                ],
+                              ),
+                            )),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 8),
+                        child: SizedBox(
+                            height: 150,
+                            width: 150,
+                            child: Card(
+                              color: Color(0XFFF1F7B5),
+                              child: Column(
+                                children: [
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  CircleAvatar(
+                                      radius: 40,
+                                      child: Image.asset(
+                                          'assets/images/family-law.png')),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Text(
+                                    'Family Law',
+                                    style: TextStyle(
+                                        color: Colors.black,
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w500),
+                                  )
+                                ],
+                              ),
+                            )),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 8),
+                        child: SizedBox(
+                            height: 150,
+                            width: 150,
+                            child: Card(
+                              color: Color(0XFFFFCBCB),
+                              child: Column(
+                                children: [
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  CircleAvatar(
+                                      radius: 35,
+                                      child: Image.asset(
+                                          'assets/images/emp_law.png')),
+                                  SizedBox(
+                                    height: 10,
                                   ),
                                   Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
                                     children: [
-                                      SizedBox(
-                                        height: 10,
-                                      ),
                                       Text(
-                                        'Agreement',
+                                        'Employment',
                                         style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 18,
-                                            color: Colors.black),
+                                            color: Colors.black,
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w500),
                                       ),
                                       Text(
-                                          'Create an Agreement for buisness,\nlending ,etc.')
+                                        'Law',
+                                        style: TextStyle(
+                                            color: Colors.black,
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w500),
+                                      ),
                                     ],
                                   )
                                 ],
                               ),
-                            ),
-                          )),
-                      SizedBox(
-                          height: 100,
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(
-                                vertical: 8, horizontal: 15),
+                            )),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 8),
+                        child: SizedBox(
+                            height: 150,
+                            width: 150,
                             child: Card(
-                              child: Row(
+                              color: Color(0XFFE0E3F4),
+                              child: Column(
                                 children: [
                                   SizedBox(
-                                    width: 5,
+                                    height: 10,
                                   ),
                                   CircleAvatar(
-                                    radius: 24,
-                                    child: Image.asset(
-                                      'assets/images/img_rectangle_11.png',
-                                    ),
-                                  ),
+                                      radius: 40,
+                                      child: Image.asset(
+                                          'assets/images/property_law.png')),
                                   SizedBox(
-                                    width: 10,
+                                    height: 10,
                                   ),
-                                  Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      SizedBox(
-                                        height: 10,
-                                      ),
-                                      Text(
-                                        'Petition for Bail',
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 18,
-                                            color: Colors.black),
-                                      ),
-                                      Text('Create a bail petition')
-                                    ],
+                                  Text(
+                                    'Property Law',
+                                    style: TextStyle(
+                                        color: Colors.black,
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w500),
                                   )
                                 ],
                               ),
-                            ),
-                          )),
-                      SizedBox(
-                          height: 100,
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(
-                                vertical: 8, horizontal: 15),
-                            child: Card(
-                              color: Colors.grey[200],
-                              child: Row(
-                                children: [
-                                  SizedBox(
-                                    width: 5,
-                                  ),
-                                  CircleAvatar(
-                                    radius: 24,
-                                    child: Image.asset(
-                                      'assets/images/img_rectangle_11_48x48.png',
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    width: 10,
-                                  ),
-                                  Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      SizedBox(
-                                        height: 10,
-                                      ),
-                                      Text(
-                                        'Affidavit',
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 18,
-                                            color: Colors.black),
-                                      ),
-                                      Text(
-                                          'Create an Agreement for buisness,\nlending ,etc.')
-                                    ],
-                                  )
-                                ],
-                              ),
-                            ),
-                          )),
+                            )),
+                      ),
                     ],
-                  )),
-              _buildThirtyOne(context, 'Contact An Expert'),
-              SizedBox(height: 15.v),
-              SizedBox(
-                height: 150,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 8),
-                      child: SizedBox(
-                          height: 150,
-                          width: 150,
-                          child: Card(
-                            color: Color(0XFFA8D1D1),
-                            child: Column(
-                              children: [
-                                SizedBox(
-                                  height: 10,
-                                ),
-                                CircleAvatar(
-                                    radius: 38,
-                                    child: Image.asset(
-                                        'assets/images/cons_law.png')),
-                                SizedBox(
-                                  height: 10,
-                                ),
-                                Column(
-                                  children: [
-                                    Text(
-                                      'Constitutional',
-                                      style: TextStyle(
-                                          color: Colors.black,
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.w500),
-                                    ),
-                                    Text(
-                                      'Law',
-                                      style: TextStyle(
-                                          color: Colors.black,
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.w500),
-                                    ),
-                                  ],
-                                )
-                              ],
-                            ),
-                          )),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 8),
-                      child: SizedBox(
-                          height: 150,
-                          width: 150,
-                          child: Card(
-                            color: Color(0XFFDFEBEB),
-                            child: Column(
-                              children: [
-                                SizedBox(
-                                  height: 10,
-                                ),
-                                CircleAvatar(
-                                    radius: 40,
-                                    child: Image.asset(
-                                        'assets/images/criminal_law.png')),
-                                SizedBox(
-                                  height: 10,
-                                ),
-                                Text(
-                                  'Criminal Law',
-                                  style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w500),
-                                )
-                              ],
-                            ),
-                          )),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 8),
-                      child: SizedBox(
-                          height: 150,
-                          width: 150,
-                          child: Card(
-                            color: Color(0XFFF1F7B5),
-                            child: Column(
-                              children: [
-                                SizedBox(
-                                  height: 10,
-                                ),
-                                CircleAvatar(
-                                    radius: 40,
-                                    child: Image.asset(
-                                        'assets/images/family-law.png')),
-                                SizedBox(
-                                  height: 10,
-                                ),
-                                Text(
-                                  'Family Law',
-                                  style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w500),
-                                )
-                              ],
-                            ),
-                          )),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 8),
-                      child: SizedBox(
-                          height: 150,
-                          width: 150,
-                          child: Card(
-                            color: Color(0XFFFFCBCB),
-                            child: Column(
-                              children: [
-                                SizedBox(
-                                  height: 10,
-                                ),
-                                CircleAvatar(
-                                    radius: 35,
-                                    child: Image.asset(
-                                        'assets/images/emp_law.png')),
-                                SizedBox(
-                                  height: 10,
-                                ),
-                                Column(
-                                  children: [
-                                    Text(
-                                      'Employment',
-                                      style: TextStyle(
-                                          color: Colors.black,
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.w500),
-                                    ),
-                                    Text(
-                                      'Law',
-                                      style: TextStyle(
-                                          color: Colors.black,
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.w500),
-                                    ),
-                                  ],
-                                )
-                              ],
-                            ),
-                          )),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 8),
-                      child: SizedBox(
-                          height: 150,
-                          width: 150,
-                          child: Card(
-                            color: Color(0XFFE0E3F4),
-                            child: Column(
-                              children: [
-                                SizedBox(
-                                  height: 10,
-                                ),
-                                CircleAvatar(
-                                    radius: 40,
-                                    child: Image.asset(
-                                        'assets/images/property_law.png')),
-                                SizedBox(
-                                  height: 10,
-                                ),
-                                Text(
-                                  'Property Law',
-                                  style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w500),
-                                )
-                              ],
-                            ),
-                          )),
-                    ),
-                  ],
+                  ),
                 ),
-              ),
-              SizedBox(height: 37.v),
-              _buildThirty(context),
-              SizedBox(height: 17.v),
-              _buildThirtyFive(context),
-            ],
+                SizedBox(height: 37.v),
+                _buildThirty(context),
+                SizedBox(height: 17.v),
+                _buildThirtyFive(context),
+              ],
+            ),
           ),
         ),
       ),

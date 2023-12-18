@@ -83,7 +83,7 @@ class CustomSearchView extends StatelessWidget {
         child: TextFormField(
           controller: controller,
           focusNode: focusNode ?? FocusNode(),
-          autofocus: autofocus!,
+          autofocus: false,
           style: textStyle ?? CustomTextStyles.bodyMediumOnError,
           keyboardType: textInputType,
           maxLines: maxLines ?? 1,

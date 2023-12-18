@@ -1,7 +1,7 @@
 import 'package:chirag_s_application/core/utils/size_utils.dart';
 import 'package:chirag_s_application/presentation/account_screen/account_screen.dart';
-import 'package:chirag_s_application/presentation/chat_interface_one_screen/chat_interface_one_screen.dart';
 import 'package:chirag_s_application/presentation/documents_page_screen/documents_page_screen.dart';
+import 'package:chirag_s_application/presentation/account_screen/government_id_screen/government_id_screen.dart';
 import 'package:chirag_s_application/presentation/home_page/home_page.dart';
 import 'package:chirag_s_application/theme/theme_helper.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +17,7 @@ class _BottomNavbarState extends State<BottomNavbar> {
   int _currentindex = 0;
   List<Widget> widgetlist = [
     HomePage(),
-    ChatInterfaceOneScreen(),
+    GovernmentIdScreen(),
     DocumentsPageScreen(),
     AccountScreen()
   ];
@@ -48,8 +48,9 @@ class _BottomNavbarState extends State<BottomNavbar> {
             ],
           ),
           child: BottomNavigationBar(
-            selectedItemColor: Theme.of(context).colorScheme.primary,
-            backgroundColor: Colors.grey[400],
+            selectedItemColor: Colors.white,
+            unselectedItemColor: Colors.grey,
+            backgroundColor: Colors.black87,
             currentIndex: _currentindex,
             type: BottomNavigationBarType.fixed,
             items: <BottomNavigationBarItem>[

@@ -1,5 +1,5 @@
 import 'package:chirag_s_application/presentation/account_screen/change_password/change_password.dart';
-import 'package:chirag_s_application/presentation/ai_settings_screen/ai_settings_screen.dart';
+import 'package:chirag_s_application/presentation/account_screen/ai_settings_screen/ai_settings_screen.dart';
 
 import 'models/account_model.dart';
 import 'package:chirag_s_application/core/app_export.dart';
