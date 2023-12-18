@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:chirag_s_application/core/app_export.dart';
-import 'package:chirag_s_application/presentation/home_page/models/home_model.dart';
+import 'package:sahayak/presentation/home_page/models/home_model.dart';
 import '../models/homepage_item_model.dart';
 
 /// A provider class for the HomePage.

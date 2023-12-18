@@ -1,10 +1,10 @@
-import 'package:chirag_s_application/core/utils/size_utils.dart';
-import 'package:chirag_s_application/presentation/account_screen/account_screen.dart';
-import 'package:chirag_s_application/presentation/documents_page_screen/documents_page_screen.dart';
-import 'package:chirag_s_application/presentation/account_screen/government_id_screen/government_id_screen.dart';
-import 'package:chirag_s_application/presentation/home_page/home_page.dart';
-import 'package:chirag_s_application/theme/theme_helper.dart';
 import 'package:flutter/material.dart';
+import 'package:sahayak/core/utils/size_utils.dart';
+import 'package:sahayak/presentation/account_screen/account_screen.dart';
+import 'package:sahayak/presentation/account_screen/government_id_form/government_id_screen.dart';
+import 'package:sahayak/presentation/documents_page_screen/documents_page_screen.dart';
+import 'package:sahayak/presentation/home_page/home_page.dart';
+import 'package:sahayak/theme/theme_helper.dart';
 
 class BottomNavbar extends StatefulWidget {
   const BottomNavbar({key});

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:chirag_s_application/core/app_export.dart';
-import 'package:chirag_s_application/presentation/auth/register_screen/models/register_model.dart';
+import 'package:sahayak/presentation/auth/register_screen/models/register_model.dart';
 
 /// A provider class for the RegisterScreen.
 ///

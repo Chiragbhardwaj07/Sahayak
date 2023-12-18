@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:chirag_s_application/core/app_export.dart';
+import 'package:sahayak/core/app_export.dart';
 
 class AppDecoration {
   // Fill decorations

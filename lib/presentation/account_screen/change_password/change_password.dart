@@ -1,10 +1,10 @@
-import 'package:chirag_s_application/core/utils/size_utils.dart';
-import 'package:chirag_s_application/core/utils/utils.dart';
-import 'package:chirag_s_application/core/utils/validation_functions.dart';
-import 'package:chirag_s_application/theme/custom_text_style.dart';
-import 'package:chirag_s_application/widgets/custom_elevated_button.dart';
-import 'package:chirag_s_application/widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
+import 'package:sahayak/core/utils/size_utils.dart';
+import 'package:sahayak/core/utils/utils.dart';
+import 'package:sahayak/core/utils/validation_functions.dart';
+import 'package:sahayak/theme/custom_text_style.dart';
+import 'package:sahayak/widgets/custom_elevated_button.dart';
+import 'package:sahayak/widgets/custom_text_form_field.dart';
 
 class ChangePassword extends StatefulWidget {
   const ChangePassword({Key? key}) : super(key: key);

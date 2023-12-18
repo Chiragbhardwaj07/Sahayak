@@ -1,5 +1,5 @@
-import 'package:chirag_s_application/core/app_export.dart';
-import 'package:chirag_s_application/widgets/custom_elevated_button.dart';
+import 'package:sahayak/core/app_export.dart';
+import 'package:sahayak/widgets/custom_elevated_button.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable

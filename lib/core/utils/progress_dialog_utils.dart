@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:chirag_s_application/core/app_export.dart';
+import 'package:sahayak/core/utils/navigator_service.dart';
 
 class ProgressDialogUtils {
   static bool isProgressVisible = false;

@@ -32,8 +32,16 @@ class DocumentsPageModel {
         text1: "Type: Order ",
         text2: "Date Created : 15/4/2021"),
     GoodstransportorderItemModel(
+        text: "Goods Transport Order",
+        text1: "Type: Order ",
+        text2: "Date Created : 15/4/2021"),
+    GoodstransportorderItemModel(
         text: "4BHK Property Sale Document",
         text1: "Type: Document",
-        text2: "Date Created : 09/10/2022")
+        text2: "Date Created : 09/10/2022"),
+    GoodstransportorderItemModel(
+        text: "4BHK Property Sale Document",
+        text1: "Type: Document",
+        text2: "Date Created : 09/10/2022"),
   ];
 }

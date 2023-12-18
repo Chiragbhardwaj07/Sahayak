@@ -1,15 +1,23 @@
-import 'package:chirag_s_application/presentation/account_screen/change_password/change_password.dart';
-import 'package:chirag_s_application/presentation/account_screen/ai_settings_screen/ai_settings_screen.dart';
+import 'package:sahayak/core/app_export.dart';
+import 'package:sahayak/core/utils/image_constant.dart';
+import 'package:sahayak/core/utils/navigator_service.dart';
+import 'package:sahayak/core/utils/size_utils.dart';
+import 'package:sahayak/localization/app_localization.dart';
+import 'package:sahayak/presentation/account_screen/ai_settings_screen/ai_settings_screen.dart';
+import 'package:sahayak/presentation/account_screen/change_password/change_password.dart';
+import 'package:sahayak/presentation/account_screen/edit_profile/edit_profile.dart';
+import 'package:sahayak/routes/app_routes.dart';
+import 'package:sahayak/theme/custom_text_style.dart';
+import 'package:sahayak/theme/theme_helper.dart';
+import 'package:sahayak/widgets/app_bar/appbar_subtitle_one.dart';
+import 'package:sahayak/widgets/app_bar/appbar_title_circleimage.dart';
+import 'package:sahayak/widgets/app_bar/appbar_title_image.dart';
+import 'package:sahayak/widgets/app_bar/custom_app_bar.dart';
+import 'package:sahayak/widgets/custom_bottom_bar.dart';
+import 'package:sahayak/widgets/custom_image_view.dart';
+import 'package:sahayak/widgets/custom_switch.dart';
 
 import 'models/account_model.dart';
-import 'package:chirag_s_application/core/app_export.dart';
-import 'package:chirag_s_application/presentation/home_page/home_page.dart';
-import 'package:chirag_s_application/widgets/app_bar/appbar_subtitle_one.dart';
-import 'package:chirag_s_application/widgets/app_bar/appbar_title_circleimage.dart';
-import 'package:chirag_s_application/widgets/app_bar/appbar_title_image.dart';
-import 'package:chirag_s_application/widgets/app_bar/custom_app_bar.dart';
-import 'package:chirag_s_application/widgets/custom_bottom_bar.dart';
-import 'package:chirag_s_application/widgets/custom_switch.dart';
 import 'package:flutter/material.dart';
 import 'provider/account_provider.dart';
 
@@ -77,7 +85,10 @@ class AccountScreenState extends State<AccountScreen> {
             Padding(
                 padding: EdgeInsets.symmetric(horizontal: 32.h),
                 child: _buildThirty(context,
-                    changePasswordText: "lbl_edit_profile".tr)),
+                    changePasswordText: "lbl_edit_profile".tr, onTapThirty: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (_) => EditProfilePage()));
+                })),
             SizedBox(height: 21.v),
             Padding(
                 padding: EdgeInsets.symmetric(horizontal: 32.h),
@@ -88,16 +99,16 @@ class AccountScreenState extends State<AccountScreen> {
                       MaterialPageRoute(builder: (_) => ChangePassword()));
                 })),
             SizedBox(height: 23.v),
-            Padding(
-                padding: EdgeInsets.symmetric(horizontal: 32.h),
-                child: _buildThirty(context,
-                    changePasswordText: "msg_stamp_paper_delivery".tr)),
-            SizedBox(height: 22.v),
-            Padding(
-                padding: EdgeInsets.symmetric(horizontal: 32.h),
-                child: _buildThirty(context,
-                    changePasswordText: "lbl_notary_request".tr)),
-            SizedBox(height: 23.v),
+            // Padding(
+            //     padding: EdgeInsets.symmetric(horizontal: 32.h),
+            //     child: _buildThirty(context,
+            //         changePasswordText: "msg_stamp_paper_delivery".tr)),
+            // SizedBox(height: 22.v),
+            // Padding(
+            //     padding: EdgeInsets.symmetric(horizontal: 32.h),
+            //     child: _buildThirty(context,
+            //         changePasswordText: "lbl_notary_request".tr)),
+            // SizedBox(height: 23.v),
             Padding(
                 padding: EdgeInsets.symmetric(horizontal: 32.h),
                 child: _buildThirty(context,
@@ -225,11 +236,6 @@ class AccountScreenState extends State<AccountScreen> {
   }
 
   /// Section Widget
-  Widget _buildBottomBar(BuildContext context) {
-    return CustomBottomBar(onChanged: (BottomBarEnum type) {
-      Navigator.pushNamed(navigatorKey.currentContext!, getCurrentRoute(type));
-    });
-  }
 
   /// Common widget
   Widget _buildThirty(
@@ -253,35 +259,6 @@ class AccountScreenState extends State<AccountScreen> {
               height: 24.adaptSize,
               width: 24.adaptSize)
         ]));
-  }
-
-  ///Handling route based on bottom click actions
-  String getCurrentRoute(BottomBarEnum type) {
-    switch (type) {
-      case BottomBarEnum.Home:
-        return AppRoutes.homePage;
-      case BottomBarEnum.Generate:
-        return AppRoutes.chatInterfaceOneScreen;
-      case BottomBarEnum.Documents:
-        return AppRoutes.documentsPageScreen;
-      case BottomBarEnum.Account:
-        return AppRoutes.accountScreen;
-      default:
-        return AppRoutes.accountScreen;
-    }
-  }
-
-  ///Handling page based on route
-  Widget getCurrentPage(
-    BuildContext context,
-    String currentRoute,
-  ) {
-    switch (currentRoute) {
-      case AppRoutes.homePage:
-        return HomePage.builder(context);
-      default:
-        return DefaultWidget();
-    }
   }
 
   /// Navigates to the governmentIdScreenOneScreen when the action is triggered.

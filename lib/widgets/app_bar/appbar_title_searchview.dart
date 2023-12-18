@@ -1,6 +1,7 @@
-import 'package:chirag_s_application/core/app_export.dart';
-import 'package:chirag_s_application/widgets/custom_search_view.dart';
 import 'package:flutter/material.dart';
+import 'package:sahayak/core/utils/size_utils.dart';
+import 'package:sahayak/localization/app_localization.dart';
+import 'package:sahayak/widgets/custom_search_view.dart';
 
 // ignore: must_be_immutable
 class AppbarTitleSearchview extends StatelessWidget {

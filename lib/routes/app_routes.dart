@@ -1,13 +1,13 @@
-import 'package:chirag_s_application/presentation/splash_screen/splash_screen.dart';
+import 'package:sahayak/presentation/account_screen/government_id_verification_screen/government_id_screen_one_screen.dart';
+import 'package:sahayak/presentation/splash_screen/splash_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:chirag_s_application/presentation/auth/login_screen/login_screen.dart';
-import 'package:chirag_s_application/presentation/auth/register_screen/register_screen.dart';
-import 'package:chirag_s_application/presentation/auth/opt_screen/opt_screen.dart';
-import 'package:chirag_s_application/presentation/account_screen/account_screen.dart';
-import 'package:chirag_s_application/presentation/account_screen/government_id_screen_one_screen/government_id_screen_one_screen.dart';
-import 'package:chirag_s_application/presentation/account_screen/ai_settings_screen/ai_settings_screen.dart';
-import 'package:chirag_s_application/presentation/documents_page_screen/documents_page_screen.dart';
-import 'package:chirag_s_application/presentation/account_screen/government_id_screen/government_id_screen.dart';
+import 'package:sahayak/presentation/auth/login_screen/login_screen.dart';
+import 'package:sahayak/presentation/auth/register_screen/register_screen.dart';
+import 'package:sahayak/presentation/auth/opt_screen/opt_screen.dart';
+import 'package:sahayak/presentation/account_screen/account_screen.dart';
+import 'package:sahayak/presentation/account_screen/ai_settings_screen/ai_settings_screen.dart';
+import 'package:sahayak/presentation/documents_page_screen/documents_page_screen.dart';
+import 'package:sahayak/presentation/account_screen/government_id_form/government_id_screen.dart';
 
 class AppRoutes {
   static const String homePage = '/home_page';

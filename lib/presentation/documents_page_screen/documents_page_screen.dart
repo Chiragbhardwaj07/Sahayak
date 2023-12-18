@@ -1,16 +1,16 @@
+import 'package:sahayak/core/app_export.dart';
+import 'package:sahayak/presentation/home_page/home_page.dart';
+import 'package:sahayak/widgets/app_bar/appbar_leading_image.dart';
+import 'package:sahayak/widgets/app_bar/appbar_title_searchview_one.dart';
+import 'package:sahayak/widgets/app_bar/custom_app_bar.dart';
+import 'package:sahayak/widgets/custom_bottom_bar.dart';
+
 import '../documents_page_screen/widgets/formlist_item_widget.dart';
 import '../documents_page_screen/widgets/goodstransportorder_item_widget.dart';
 import '../documents_page_screen/widgets/rentagreementlist_item_widget.dart';
-import 'models/documents_page_model.dart';
 import 'models/formlist_item_model.dart';
 import 'models/goodstransportorder_item_model.dart';
 import 'models/rentagreementlist_item_model.dart';
-import 'package:chirag_s_application/core/app_export.dart';
-import 'package:chirag_s_application/presentation/home_page/home_page.dart';
-import 'package:chirag_s_application/widgets/app_bar/appbar_leading_image.dart';
-import 'package:chirag_s_application/widgets/app_bar/appbar_title_searchview_one.dart';
-import 'package:chirag_s_application/widgets/app_bar/custom_app_bar.dart';
-import 'package:chirag_s_application/widgets/custom_bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'provider/documents_page_provider.dart';
 
@@ -52,54 +52,42 @@ class DocumentsPageScreenState extends State<DocumentsPageScreen> {
 
     return Scaffold(
       appBar: _buildAppBar(context),
-      body: GestureDetector(
-        onTap: () {
-          // Remove focus when tapping outside text fields
-          FocusScope.of(context).requestFocus(FocusNode());
-        },
-        child: Container(
-          width: double.maxFinite,
-          padding: EdgeInsets.symmetric(
-            horizontal: 2.h,
-            vertical: 11.v,
-          ),
-          child: ListView(
-            children: [
-              _buildFiltersChips(context),
-              SizedBox(height: 29.v),
-              Align(
-                alignment: Alignment.centerLeft,
-                child: Padding(
-                  padding: EdgeInsets.only(left: 24.h),
-                  child: Text(
-                    "lbl_drafts2".tr,
-                    style: CustomTextStyles
-                        .titleMediumMontserratSecondaryContainer,
-                  ),
-                ),
+      body: ListView(
+        children: [
+          _buildFiltersChips(context),
+          SizedBox(height: 29.v),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Padding(
+              padding: EdgeInsets.only(left: 24.h),
+              child: Text(
+                "lbl_drafts2".tr,
+                style: CustomTextStyles.titleMediumMontserratSecondaryContainer,
               ),
-              SizedBox(height: 9.v),
-              _buildRentAgreementList(context),
-              SizedBox(height: 31.v),
-              Align(
-                alignment: Alignment.centerLeft,
-                child: Padding(
-                  padding: EdgeInsets.only(left: 24.h),
-                  child: Text(
-                    "msg_reviewed_and_delivered".tr,
-                    style: CustomTextStyles
-                        .titleMediumMontserratSecondaryContainer,
-                  ),
-                ),
-              ),
-              SizedBox(height: 16.v),
-              _buildFormList(context),
-              SizedBox(height: 33.v),
-              _buildDocumentsPageStack(context),
-              SizedBox(height: 5.v),
-            ],
+            ),
           ),
-        ),
+          SizedBox(height: 9.v),
+          _buildRentAgreementList(context),
+          SizedBox(height: 31.v),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Padding(
+              padding: EdgeInsets.only(left: 24.h),
+              child: Text(
+                "msg_reviewed_and_delivered".tr,
+                style: CustomTextStyles.titleMediumMontserratSecondaryContainer,
+              ),
+            ),
+          ),
+          SizedBox(height: 16.v),
+          _buildFormList(context),
+          SizedBox(height: 33.v),
+          _buildDocumentsPageStack(context),
+          SizedBox(height: 5.v),
+          SizedBox(
+            height: 70,
+          )
+        ],
       ),
     );
   }

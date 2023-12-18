@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:chirag_s_application/core/app_export.dart';
-import 'package:chirag_s_application/presentation/auth/login_screen/models/login_model.dart';
+import 'package:sahayak/presentation/auth/login_screen/models/login_model.dart';
 
 /// A provider class for the LoginScreen.
 ///

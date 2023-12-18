@@ -1,5 +1,5 @@
-import 'package:chirag_s_application/core/app_export.dart';
-import 'package:chirag_s_application/widgets/base_button.dart';
+import 'package:sahayak/core/app_export.dart';
+import 'package:sahayak/widgets/base_button.dart';
 import 'package:flutter/material.dart';
 
 class CustomOutlinedButton extends BaseButton {
