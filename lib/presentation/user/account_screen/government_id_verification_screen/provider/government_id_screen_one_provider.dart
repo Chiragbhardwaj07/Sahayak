@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sahayak/presentation/account_screen/government_id_verification_screen/models/government_id_screen_one_model.dart';
+import 'package:sahayak/presentation/user/account_screen/government_id_verification_screen/models/government_id_screen_one_model.dart';
 
 /// A provider class for the GovernmentIdScreenOneScreen.
 ///

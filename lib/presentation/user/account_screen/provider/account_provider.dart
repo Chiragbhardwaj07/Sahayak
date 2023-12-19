@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sahayak/presentation/account_screen/models/account_model.dart';
+import 'package:sahayak/presentation/user/account_screen/models/account_model.dart';
 
 /// A provider class for the AccountScreen.
 ///

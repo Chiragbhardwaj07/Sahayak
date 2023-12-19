@@ -13,47 +13,50 @@ class TextMessageWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(12.0),
-      child: Column(
-        crossAxisAlignment:
-            user ? CrossAxisAlignment.end : CrossAxisAlignment.start,
-        children: [
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 10),
-            child: Text(
-              msgSender,
-              style: const TextStyle(
-                fontSize: 13,
-                fontFamily: 'Poppins',
-                color: Colors.black87,
-              ),
-            ),
-          ),
-          Material(
-            borderRadius: BorderRadius.only(
-              bottomLeft: const Radius.circular(50),
-              topLeft:
-                  user ? const Radius.circular(50) : const Radius.circular(0),
-              bottomRight: const Radius.circular(50),
-              topRight:
-                  user ? const Radius.circular(0) : const Radius.circular(50),
-            ),
-            color: user ? Colors.deepPurple : Colors.white,
-            elevation: 5,
-            child: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+    return Container(
+      child: Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: Column(
+          crossAxisAlignment:
+              user ? CrossAxisAlignment.end : CrossAxisAlignment.start,
+          children: [
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
               child: Text(
-                msgText,
-                style: TextStyle(
-                  color: user ? Colors.white : Colors.deepPurple,
+                msgSender,
+                style: const TextStyle(
+                  fontSize: 13,
                   fontFamily: 'Poppins',
-                  fontSize: 15,
+                  color: Colors.black87,
                 ),
               ),
             ),
-          ),
-        ],
+            Material(
+              borderRadius: BorderRadius.only(
+                bottomLeft: const Radius.circular(50),
+                topLeft:
+                    user ? const Radius.circular(50) : const Radius.circular(0),
+                bottomRight: const Radius.circular(50),
+                topRight:
+                    user ? const Radius.circular(0) : const Radius.circular(50),
+              ),
+              color: user ? Colors.deepPurple : Colors.white,
+              elevation: 5,
+              child: Padding(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 5, horizontal: 20),
+                child: Text(
+                  msgText,
+                  style: TextStyle(
+                    color: user ? Colors.white : Colors.deepPurple,
+                    fontFamily: 'Poppins',
+                    fontSize: 15,
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

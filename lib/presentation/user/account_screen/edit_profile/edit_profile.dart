@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:sahayak/presentation/account_screen/edit_profile/provider/edit_profile_provider.dart';
+import 'package:sahayak/presentation/user/account_screen/edit_profile/provider/edit_profile_provider.dart';
 
 class EditProfilePage extends StatelessWidget {
   const EditProfilePage({super.key});

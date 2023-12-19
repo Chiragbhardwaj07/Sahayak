@@ -22,6 +22,7 @@ class _Template_pageState extends State<Template_page> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
+        physics: NeverScrollableScrollPhysics(),
         children: [
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 20),
@@ -43,6 +44,13 @@ class _Template_pageState extends State<Template_page> {
                       fontWeight: FontWeight.w700),
                 ),
               ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 20.0),
+            child: Text(
+              'Choose a Template',
+              style: TextStyle(fontWeight: FontWeight.bold),
             ),
           ),
           SizedBox(

@@ -1,8 +1,10 @@
+import 'package:sahayak/presentation/expert/expert_bottom_navbar/expert_bottom_navbar.dart';
+import 'package:sahayak/presentation/expert/homepage_expert/provider/expert_homepage_provider.dart';
 import 'package:sahayak/presentation/user/Generate_page/ai_chat/ai_chat_page.dart';
 import 'package:sahayak/presentation/user/Generate_page/ai_chat/provider/ai_chat_provider.dart';
-import 'package:sahayak/presentation/account_screen/government_id_verification_screen/provider/government_id_screen_one_provider.dart';
-import 'package:sahayak/presentation/account_screen/provider/account_provider.dart';
-import 'package:sahayak/presentation/account_screen/ai_settings_screen/provider/ai_settings_provider.dart';
+import 'package:sahayak/presentation/user/account_screen/government_id_verification_screen/provider/government_id_screen_one_provider.dart';
+import 'package:sahayak/presentation/user/account_screen/provider/account_provider.dart';
+import 'package:sahayak/presentation/user/account_screen/ai_settings_screen/provider/ai_settings_provider.dart';
 import 'package:sahayak/presentation/auth/login_screen/login_screen.dart';
 import 'package:sahayak/presentation/auth/login_screen/provider/login_provider.dart';
 import 'package:sahayak/presentation/user/bottom_navbar/bottom_navbar.dart';
@@ -43,6 +45,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => LoginProvider()),
         ChangeNotifierProvider(create: (_) => GovernmentIdScreenOneProvider()),
         ChangeNotifierProvider(create: (_) => TemplateProvider()),
+        ChangeNotifierProvider(create: (_) => ExpertHomePageProvider()),
       ],
       child: Consumer<ThemeProvider>(
         builder: (context, provider, child) {
@@ -64,7 +67,7 @@ class MyApp extends StatelessWidget {
               ),
             ],
             // initialRoute: '/app_navigation_screen',
-            home: LoginScreen(),
+            home: ExpertBottomNavbar(),
             routes: AppRoutes.routes,
           );
         },

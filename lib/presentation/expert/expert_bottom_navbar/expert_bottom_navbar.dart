@@ -1,27 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:sahayak/core/utils/size_utils.dart';
-import 'package:sahayak/presentation/user/Generate_page/ai_chat/ai_chat_page.dart';
+import 'package:sahayak/presentation/expert/homepage_expert/homepage_expert.dart';
 import 'package:sahayak/presentation/user/account_screen/account_screen.dart';
 import 'package:sahayak/presentation/user/account_screen/government_id_form/government_id_screen.dart';
 import 'package:sahayak/presentation/user/documents_page_screen/documents_page_screen.dart';
 import 'package:sahayak/presentation/user/home_page/home_page.dart';
 import 'package:sahayak/theme/theme_helper.dart';
 
-class BottomNavbar extends StatefulWidget {
-  const BottomNavbar({key});
+class ExpertBottomNavbar extends StatefulWidget {
+  const ExpertBottomNavbar({key});
 
   @override
-  State<BottomNavbar> createState() => _BottomNavbarState();
+  State<ExpertBottomNavbar> createState() => _BottomNavbarState();
 }
 
-class _BottomNavbarState extends State<BottomNavbar> {
+class _BottomNavbarState extends State<ExpertBottomNavbar> {
   int _currentindex = 0;
-  List<Widget> widgetlist = [
-    HomePage(),
-    AIChatScreen(),
-    DocumentsPageScreen(),
-    AccountScreen()
-  ];
+  List<Widget> widgetlist = [Expert_Homepage(), AccountScreen()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,16 +54,6 @@ class _BottomNavbarState extends State<BottomNavbar> {
                 backgroundColor: Theme.of(context).colorScheme.primary,
                 icon: Icon(Icons.home),
                 label: 'Home',
-              ),
-              BottomNavigationBarItem(
-                backgroundColor: Theme.of(context).colorScheme.primary,
-                icon: Icon(Icons.wb_incandescent_rounded),
-                label: 'Generate',
-              ),
-              BottomNavigationBarItem(
-                backgroundColor: Theme.of(context).colorScheme.primary,
-                icon: Icon(Icons.edit_document),
-                label: 'Documents',
               ),
               BottomNavigationBarItem(
                 backgroundColor: Theme.of(context).colorScheme.primary,
