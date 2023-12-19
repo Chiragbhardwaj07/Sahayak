@@ -20,6 +20,8 @@ dependencies:
   fluttertoast: ^8.2.4
   http: ^1.1.2
   another_flushbar: ^1.12.30
+  web_socket_channel: ^2.4.0
+  flutter_form_builder: ^9.1.1
 dev_dependencies: 
   flutter_test: 
     sdk: flutter

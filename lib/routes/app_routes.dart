@@ -6,7 +6,7 @@ import 'package:sahayak/presentation/auth/register_screen/register_screen.dart';
 import 'package:sahayak/presentation/auth/opt_screen/opt_screen.dart';
 import 'package:sahayak/presentation/account_screen/account_screen.dart';
 import 'package:sahayak/presentation/account_screen/ai_settings_screen/ai_settings_screen.dart';
-import 'package:sahayak/presentation/documents_page_screen/documents_page_screen.dart';
+import 'package:sahayak/presentation/user/documents_page_screen/documents_page_screen.dart';
 import 'package:sahayak/presentation/account_screen/government_id_form/government_id_screen.dart';
 
 class AppRoutes {

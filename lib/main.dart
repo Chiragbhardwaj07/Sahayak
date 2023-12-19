@@ -1,9 +1,15 @@
+import 'package:sahayak/presentation/user/Generate_page/ai_chat/ai_chat_page.dart';
+import 'package:sahayak/presentation/user/Generate_page/ai_chat/provider/ai_chat_provider.dart';
+import 'package:sahayak/presentation/account_screen/government_id_verification_screen/provider/government_id_screen_one_provider.dart';
 import 'package:sahayak/presentation/account_screen/provider/account_provider.dart';
 import 'package:sahayak/presentation/account_screen/ai_settings_screen/provider/ai_settings_provider.dart';
-import 'package:sahayak/presentation/bottom_navbar/bottom_navbar.dart';
+import 'package:sahayak/presentation/auth/login_screen/login_screen.dart';
+import 'package:sahayak/presentation/auth/login_screen/provider/login_provider.dart';
+import 'package:sahayak/presentation/user/bottom_navbar/bottom_navbar.dart';
 
-import 'package:sahayak/presentation/documents_page_screen/provider/documents_page_provider.dart';
-import 'package:sahayak/presentation/home_page/provider/home_provider.dart';
+import 'package:sahayak/presentation/user/documents_page_screen/provider/documents_page_provider.dart';
+import 'package:sahayak/presentation/user/home_page/Template/provider/template_provider.dart';
+import 'package:sahayak/presentation/user/home_page/provider/home_provider.dart';
 import 'package:sahayak/presentation/splash_screen/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -33,6 +39,10 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => AccountProvider()),
         ChangeNotifierProvider(create: (_) => DocumentsPageProvider()),
         ChangeNotifierProvider(create: (_) => AiSettingsProvider()),
+        ChangeNotifierProvider(create: (_) => AIChatProvider()),
+        ChangeNotifierProvider(create: (_) => LoginProvider()),
+        ChangeNotifierProvider(create: (_) => GovernmentIdScreenOneProvider()),
+        ChangeNotifierProvider(create: (_) => TemplateProvider()),
       ],
       child: Consumer<ThemeProvider>(
         builder: (context, provider, child) {
@@ -54,7 +64,7 @@ class MyApp extends StatelessWidget {
               ),
             ],
             // initialRoute: '/app_navigation_screen',
-            home: BottomNavbar(),
+            home: LoginScreen(),
             routes: AppRoutes.routes,
           );
         },
