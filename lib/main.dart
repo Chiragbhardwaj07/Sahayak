@@ -1,4 +1,5 @@
 import 'package:sahayak/presentation/expert/expert_bottom_navbar/expert_bottom_navbar.dart';
+import 'package:sahayak/presentation/expert/expert_chat/provider/expert_chat_provider.dart';
 import 'package:sahayak/presentation/expert/homepage_expert/provider/expert_homepage_provider.dart';
 import 'package:sahayak/presentation/user/Generate_page/ai_chat/ai_chat_page.dart';
 import 'package:sahayak/presentation/user/Generate_page/ai_chat/provider/ai_chat_provider.dart';
@@ -46,6 +47,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => GovernmentIdScreenOneProvider()),
         ChangeNotifierProvider(create: (_) => TemplateProvider()),
         ChangeNotifierProvider(create: (_) => ExpertHomePageProvider()),
+        ChangeNotifierProvider(create: (_) => ExpertChatProvider()),
       ],
       child: Consumer<ThemeProvider>(
         builder: (context, provider, child) {
@@ -67,7 +69,7 @@ class MyApp extends StatelessWidget {
               ),
             ],
             // initialRoute: '/app_navigation_screen',
-            home: ExpertBottomNavbar(),
+            home: BottomNavbar(),
             routes: AppRoutes.routes,
           );
         },

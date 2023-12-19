@@ -1,5 +1,6 @@
 import 'package:sahayak/core/utils/image_constant.dart';
 import 'package:sahayak/core/utils/size_utils.dart';
+import 'package:sahayak/presentation/expert/expert_chat/expert_chat.dart';
 import 'package:sahayak/presentation/expert/homepage_expert/models/pending_item_model.dart';
 import 'package:sahayak/theme/custom_text_style.dart';
 import 'package:sahayak/theme/theme_helper.dart';
@@ -20,6 +21,14 @@ class ReviewedItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      onTap: () {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (_) => ExpertChatScreen(
+                      ClientName: PendingItemModelObj.client_name,
+                    )));
+      },
       leading: CircleAvatar(child: Icon(Icons.person_sharp)),
       title: Text(
         PendingItemModelObj.client_name,
