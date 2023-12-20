@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sahayak/core/constants/constants.dart';
 import 'package:sahayak/presentation/user/Chat_Page/ai_chat/provider/ai_chat_provider.dart';
+import 'package:sahayak/presentation/user/account_screen/ai_settings_screen/drawer.dart';
 import 'package:sahayak/widgets/chat_widgets/messages/text_message.dart';
 import 'package:sahayak/widgets/document_view/document_view.dart';
 import 'package:sahayak/widgets/json_form/json_form.dart';
@@ -46,13 +47,14 @@ class _AIChatScreenState extends State<AIChatScreen> {
 
     return SafeArea(
       child: Scaffold(
+          drawer: myDrawer(),
           appBar: AppBar(
             backgroundColor: Colors.grey[300],
-            leading: IconButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                icon: Icon(Icons.arrow_back_ios)),
+            // leading: IconButton(
+            //     onPressed: () {
+            //       Navigator.pop(context);
+            //     },
+            //     icon: Icon(Icons.arrow_back_ios)),
             title: Column(
               children: [
                 Text(

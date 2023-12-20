@@ -3,6 +3,7 @@ import 'package:sahayak/core/utils/image_constant.dart';
 import 'package:sahayak/core/utils/navigator_service.dart';
 import 'package:sahayak/core/utils/size_utils.dart';
 import 'package:sahayak/localization/app_localization.dart';
+import 'package:sahayak/presentation/user/bottom_navbar/bottom_navbar.dart';
 import 'package:sahayak/routes/app_routes.dart';
 import 'package:sahayak/theme/theme_helper.dart';
 import 'package:sahayak/widgets/app_bar/appbar_leading_image.dart';
@@ -77,7 +78,8 @@ class OptScreenState extends State<OptScreen> {
               CustomElevatedButton(
                   text: "lbl_continue".tr,
                   onPressed: () {
-                    onTapContinue(context);
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (_) => BottomNavbar()));
                   }),
               SizedBox(height: 23.v),
               Text("msg_didn_t_receive_a".tr,
@@ -120,9 +122,5 @@ class OptScreenState extends State<OptScreen> {
   }
 
   /// Navigates to the governmentIdScreen when the action is triggered.
-  onTapContinue(BuildContext context) {
-    NavigatorService.pushNamed(
-      AppRoutes.governmentIdScreen,
-    );
-  }
+  onTapContinue(BuildContext context) {}
 }

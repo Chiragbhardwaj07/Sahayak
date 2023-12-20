@@ -14,27 +14,32 @@ class TemplateModel {
     ),
     TemplateItemModel(
       docType: 'Petition',
-      DocDesc: 'Create the NDA(Non - Disclosure Agreement under the ICA - 1965',
+      DocDesc:
+          'Petitions are formal requests submitted to a court seeking legal action or relief',
       img: 'assets/images/petition.jpeg',
     ),
     TemplateItemModel(
       docType: 'Will',
-      DocDesc: 'Create an Agreement for buisness,\nlending ,etc.',
+      DocDesc:
+          'A legal document detailing an individual\'s wishes regarding the distribution of their assets after death',
       img: 'assets/images/will.jpeg',
     ),
     TemplateItemModel(
       docType: 'Purchase Agreement',
-      DocDesc: 'Create the NDA(Non - Disclosure Agreement under the ICA - 1965',
+      DocDesc:
+          'A contractual agreement between a buyer and seller outlining T&C for the sale of property.',
       img: 'assets/images/purchase.jpeg',
     ),
     TemplateItemModel(
       docType: 'Rental Agreement',
-      DocDesc: 'Create an Agreement for buisness,\nlending ,etc.',
+      DocDesc:
+          ' A legally binding contract between a landlord and tenant outlining the terms and conditions of renting a property',
       img: 'assets/images/rent.jpeg',
     ),
     TemplateItemModel(
       docType: 'Affidavit',
-      DocDesc: 'Create the NDA(Non - Disclosure Agreement under the ICA - 1965',
+      DocDesc:
+          'Sworn written statements made under oath or affirmation, signed before a notary',
       img: 'assets/images/aff.jpeg',
     ),
     TemplateItemModel(
@@ -44,7 +49,8 @@ class TemplateModel {
     ),
     TemplateItemModel(
       docType: 'Transfer of Shares',
-      DocDesc: 'Create the NDA(Non - Disclosure Agreement under the ICA - 1965',
+      DocDesc:
+          ' Financial instruments serving as a guarantee or security for fulfilling obligations with terms of a contract',
       img: 'assets/images/share.jpeg',
     ),
     TemplateItemModel(
