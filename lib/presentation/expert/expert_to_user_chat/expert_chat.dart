@@ -5,8 +5,8 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sahayak/core/constants/constants.dart';
-import 'package:sahayak/presentation/expert/expert_chat/provider/expert_chat_provider.dart';
-import 'package:sahayak/presentation/user/Generate_page/ai_chat/provider/ai_chat_provider.dart';
+import 'package:sahayak/presentation/expert/expert_to_user_chat/provider/expert_chat_provider.dart';
+import 'package:sahayak/presentation/user/Chat_Page/ai_chat/provider/ai_chat_provider.dart';
 import 'package:sahayak/widgets/chat_widgets/messages/text_message.dart';
 import 'package:sahayak/widgets/document_view/document_view.dart';
 import 'package:sahayak/widgets/json_form/json_form.dart';
@@ -169,7 +169,7 @@ class expertChatBuilder extends StatelessWidget {
               return JsonForm(fields: fields);
             } else if (message['type'] == AppConstants.documentViewType) {
               return DocumentChatView(
-                  title: message['document_title'],
+                  docName: message['document_title'],
                   content: message['document_content']);
             } else {
               return TextMessageWidget(

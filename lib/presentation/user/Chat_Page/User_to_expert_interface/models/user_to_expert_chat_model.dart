@@ -1,7 +1,8 @@
+import 'package:flutter/material.dart';
 import 'package:sahayak/presentation/expert/homepage_expert/models/pending_item_model.dart';
 
-class ExpertChatModel {
-  List<PendingItemModel> pendinglist = [
+class UserToExpertChatModel {
+  List<PendingItemModel> Expertlist = [
     PendingItemModel(
       client_name: 'Ankur Debnath',
       time: 'Tue 3:07pm',
@@ -20,23 +21,6 @@ class ExpertChatModel {
     PendingItemModel(
       client_name: 'Nandini Dubey',
       time: 'Thu 12:09pm',
-      img: 'assets/images/one.jpeg',
-    ),
-  ];
-  List<PendingItemModel> reviewedlist = [
-    PendingItemModel(
-      client_name: 'Ishika Shukla',
-      time: '3:07pm',
-      img: 'assets/images/one.jpeg',
-    ),
-    PendingItemModel(
-      client_name: 'Prithvi Raj',
-      time: '9:09am',
-      img: 'assets/images/one.jpeg',
-    ),
-    PendingItemModel(
-      client_name: 'Kartikey',
-      time: '11:55pm',
       img: 'assets/images/one.jpeg',
     ),
   ];

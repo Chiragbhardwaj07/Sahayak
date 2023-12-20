@@ -229,11 +229,12 @@ class LoginScreenState extends State<LoginScreen> {
                                 Padding(
                                     padding: EdgeInsets.only(left: 8.h),
                                     child: Text("lbl_sign_up".tr,
-                                        style: CustomTextStyles
-                                            .titleMediumPoppinsBlueA400
-                                            .copyWith(
-                                                decoration:
-                                                    TextDecoration.underline)))
+                                        style: TextStyle(
+                                            fontSize: 14,
+                                            color: Colors.blue,
+                                            fontWeight: FontWeight.bold,
+                                            decoration:
+                                                TextDecoration.underline)))
                               ]))),
                   SizedBox(height: 5.v)
                 ]))));

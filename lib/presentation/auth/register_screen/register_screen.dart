@@ -115,11 +115,12 @@ class RegisterScreenState extends State<RegisterScreen> {
                                 child: Padding(
                                     padding: EdgeInsets.only(left: 10.h),
                                     child: Text("lbl_login".tr,
-                                        style: CustomTextStyles
-                                            .titleMediumPoppinsBlueA400
-                                            .copyWith(
-                                                decoration:
-                                                    TextDecoration.underline))))
+                                        style: TextStyle(
+                                            fontSize: 12,
+                                            color: Colors.blue,
+                                            fontWeight: FontWeight.bold,
+                                            decoration:
+                                                TextDecoration.underline))))
                           ])),
                   SizedBox(height: 5.v)
                 ]))));

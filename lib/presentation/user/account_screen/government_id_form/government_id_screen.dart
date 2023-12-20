@@ -1,3 +1,4 @@
+import 'package:file_picker/file_picker.dart';
 import 'package:sahayak/core/app_export.dart';
 import 'package:sahayak/core/utils/image_constant.dart';
 import 'package:sahayak/core/utils/size_utils.dart';
@@ -28,6 +29,25 @@ class GovernmentIdScreen extends StatefulWidget {
       create: (context) => GovernmentIdProvider(),
       child: GovernmentIdScreen(),
     );
+  }
+}
+
+Future<void> pickFile() async {
+  try {
+    FilePickerResult? result = await FilePicker.platform.pickFiles();
+
+    if (result != null) {
+      PlatformFile file = result.files.first;
+
+      // Use the file (for example, print its path)
+      print('File picked: ${file.path}');
+    } else {
+      // User canceled the picker
+      print('User canceled the file picker.');
+    }
+  } catch (e) {
+    // Handle any errors that might occur during file picking
+    print('Error picking file: $e');
   }
 }
 
@@ -245,11 +265,7 @@ class GovernmentIdScreenState extends State<GovernmentIdScreen> {
   Widget _buildUploadAadharCardButton(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => BottomNavbar(),
-            ));
+        pickFile();
       },
       child: CustomElevatedButton(
         height: 50.v,

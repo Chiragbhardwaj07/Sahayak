@@ -1,14 +1,17 @@
 import 'package:sahayak/presentation/expert/expert_bottom_navbar/expert_bottom_navbar.dart';
-import 'package:sahayak/presentation/expert/expert_chat/provider/expert_chat_provider.dart';
+import 'package:sahayak/presentation/expert/expert_to_user_chat/provider/expert_chat_provider.dart';
 import 'package:sahayak/presentation/expert/homepage_expert/provider/expert_homepage_provider.dart';
-import 'package:sahayak/presentation/user/Generate_page/ai_chat/ai_chat_page.dart';
-import 'package:sahayak/presentation/user/Generate_page/ai_chat/provider/ai_chat_provider.dart';
+import 'package:sahayak/presentation/user/Chat_Page/User_to_expert_interface/provider/conversations_provider.dart';
+import 'package:sahayak/presentation/user/Chat_Page/User_to_expert_interface/provider/user_expert_chat_provider.dart';
+import 'package:sahayak/presentation/user/Chat_Page/ai_chat/ai_chat_page.dart';
+import 'package:sahayak/presentation/user/Chat_Page/ai_chat/provider/ai_chat_provider.dart';
 import 'package:sahayak/presentation/user/account_screen/government_id_verification_screen/provider/government_id_screen_one_provider.dart';
 import 'package:sahayak/presentation/user/account_screen/provider/account_provider.dart';
 import 'package:sahayak/presentation/user/account_screen/ai_settings_screen/provider/ai_settings_provider.dart';
 import 'package:sahayak/presentation/auth/login_screen/login_screen.dart';
 import 'package:sahayak/presentation/auth/login_screen/provider/login_provider.dart';
 import 'package:sahayak/presentation/user/bottom_navbar/bottom_navbar.dart';
+import 'package:sahayak/presentation/user/documents_page_screen/focument_test.dart';
 
 import 'package:sahayak/presentation/user/documents_page_screen/provider/documents_page_provider.dart';
 import 'package:sahayak/presentation/user/home_page/Template/provider/template_provider.dart';
@@ -48,6 +51,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => TemplateProvider()),
         ChangeNotifierProvider(create: (_) => ExpertHomePageProvider()),
         ChangeNotifierProvider(create: (_) => ExpertChatProvider()),
+        ChangeNotifierProvider(create: (_) => ConversationsProvider()),
       ],
       child: Consumer<ThemeProvider>(
         builder: (context, provider, child) {
@@ -69,7 +73,7 @@ class MyApp extends StatelessWidget {
               ),
             ],
             // initialRoute: '/app_navigation_screen',
-            home: BottomNavbar(),
+            home: LoginScreen(),
             routes: AppRoutes.routes,
           );
         },

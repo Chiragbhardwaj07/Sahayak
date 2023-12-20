@@ -11,25 +11,25 @@ class ExpertChatProvider extends ChangeNotifier {
     {
       'type': 'chat.message',
       'content': 'Hello',
-      'sender': 'ankur',
-      'is_from_sender': true,
-    },
-    {
-      'type': 'chat.message',
-      'content': 'Hii',
       'sender': 'AI',
       'is_from_sender': false,
     },
     {
       'type': 'chat.message',
-      'content': 'wyd',
+      'content': 'How can I help you?',
+      'sender': 'AI',
+      'is_from_sender': false,
+    },
+    {
+      'type': 'chat.message',
+      'content': 'Draft a legal document for me from the chosen template',
       'sender': 'ankur',
       'is_from_sender': true,
     },
     {
       'type': 'chat.message',
-      'content': 'Nothing',
-      'sender': 'ai',
+      'content': 'Okay, your request will be processed shortly',
+      'sender': 'AI',
       'is_from_sender': false,
     },
   ];

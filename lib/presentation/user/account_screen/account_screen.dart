@@ -55,9 +55,8 @@ class AccountScreenState extends State<AccountScreen> {
                 child: Row(children: [
                   AppbarTitleCircleimage(imagePath: ImageConstant.imgImage6),
                   AppbarSubtitleOne(
-                      text: "lbl_ankur_debnath".tr,
-                      margin:
-                          EdgeInsets.only(left: 21.h, top: 10.v, bottom: 3.v)),
+                    text: "lbl_ankur_debnath".tr,
+                  ),
                   AppbarTitleImage(
                       imagePath: ImageConstant.imgVerifiedBadge,
                       margin:

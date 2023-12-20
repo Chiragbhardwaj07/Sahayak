@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sahayak/core/utils/size_utils.dart';
-import 'package:sahayak/presentation/user/Generate_page/ai_chat/ai_chat_page.dart';
+import 'package:sahayak/presentation/user/Chat_Page/ai_chat/ai_chat_page.dart';
+import 'package:sahayak/presentation/user/Chat_Page/coversations.dart';
 import 'package:sahayak/presentation/user/account_screen/account_screen.dart';
 import 'package:sahayak/presentation/user/account_screen/government_id_form/government_id_screen.dart';
 import 'package:sahayak/presentation/user/documents_page_screen/documents_page_screen.dart';
@@ -18,7 +19,7 @@ class _BottomNavbarState extends State<BottomNavbar> {
   int _currentindex = 0;
   List<Widget> widgetlist = [
     HomePage(),
-    AIChatScreen(),
+    Conversations(),
     DocumentsPageScreen(),
     AccountScreen()
   ];
@@ -62,8 +63,8 @@ class _BottomNavbarState extends State<BottomNavbar> {
               ),
               BottomNavigationBarItem(
                 backgroundColor: Theme.of(context).colorScheme.primary,
-                icon: Icon(Icons.wb_incandescent_rounded),
-                label: 'Generate',
+                icon: Icon(Icons.chat),
+                label: 'Chats',
               ),
               BottomNavigationBarItem(
                 backgroundColor: Theme.of(context).colorScheme.primary,

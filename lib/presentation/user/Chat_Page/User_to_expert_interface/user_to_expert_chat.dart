@@ -2,27 +2,50 @@
 
 import 'dart:convert';
 
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sahayak/core/constants/constants.dart';
-import 'package:sahayak/presentation/user/Generate_page/ai_chat/provider/ai_chat_provider.dart';
+import 'package:sahayak/presentation/expert/expert_to_user_chat/provider/expert_chat_provider.dart';
+import 'package:sahayak/presentation/user/Chat_Page/User_to_expert_interface/provider/user_expert_chat_provider.dart';
+import 'package:sahayak/presentation/user/Chat_Page/ai_chat/provider/ai_chat_provider.dart';
 import 'package:sahayak/widgets/chat_widgets/messages/text_message.dart';
 import 'package:sahayak/widgets/document_view/document_view.dart';
 import 'package:sahayak/widgets/json_form/json_form.dart';
 
-class AIChatScreen extends StatefulWidget {
-  const AIChatScreen({super.key});
+class UserToExpertChatScreen extends StatefulWidget {
+  String ClientName;
+  UserToExpertChatScreen({super.key, required this.ClientName});
 
   @override
-  _AIChatScreenState createState() => _AIChatScreenState();
+  _UserToExpertChatScreenState createState() => _UserToExpertChatScreenState();
 }
 
-class _AIChatScreenState extends State<AIChatScreen> {
+Future<void> pickFile() async {
+  try {
+    FilePickerResult? result = await FilePicker.platform.pickFiles();
+
+    if (result != null) {
+      PlatformFile file = result.files.first;
+
+      // Use the file (for example, print its path)
+      print('File picked: ${file.path}');
+    } else {
+      // User canceled the picker
+      print('User canceled the file picker.');
+    }
+  } catch (e) {
+    // Handle any errors that might occur during file picking
+    print('Error picking file: $e');
+  }
+}
+
+class _UserToExpertChatScreenState extends State<UserToExpertChatScreen> {
   final chatMessageTextController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
-    final aiChatProvider = Provider.of<AIChatProvider>(context);
+    final expertChatProvider = Provider.of<UserToExpertChatProvider>(context);
 
     return SafeArea(
       child: Scaffold(
@@ -35,8 +58,8 @@ class _AIChatScreenState extends State<AIChatScreen> {
                 icon: Icon(Icons.arrow_back_ios)),
             title: Column(
               children: [
-                Text(aiChatProvider.title),
-                // Text(aiChatProvider.subtitle,style: TextStyle(fontSize: 8),),
+                Text(widget.ClientName),
+                // Text(expertChatProvider.subtitle,style: TextStyle(fontSize: 8),),
               ],
             ),
             actions: [
@@ -63,7 +86,7 @@ class _AIChatScreenState extends State<AIChatScreen> {
               Expanded(
                 child: Align(
                     alignment: Alignment.bottomCenter,
-                    child: const AIChatBuilder()),
+                    child: const expertChatBuilder()),
               ),
               Container(
                   padding:
@@ -82,6 +105,19 @@ class _AIChatScreenState extends State<AIChatScreen> {
                                   left: 8.0, top: 2, bottom: 2),
                               child: Row(
                                 children: <Widget>[
+                                  ClipRRect(
+                                    borderRadius: BorderRadius.circular(50),
+                                    child: ElevatedButton(
+                                      onPressed: () {
+                                        chatMessageTextController.clear();
+                                      },
+                                      child: const Padding(
+                                        padding: EdgeInsets.all(10.0),
+                                        child: Icon(Icons.keyboard_voice,
+                                            color: Colors.white),
+                                      ),
+                                    ),
+                                  ),
                                   Expanded(
                                     child: TextField(
                                       onChanged: (value) {},
@@ -97,10 +133,10 @@ class _AIChatScreenState extends State<AIChatScreen> {
                                       ),
                                     ),
                                   ),
-                                  IconButton(
-                                    onPressed: () {},
-                                    icon: const Icon(Icons.attach_file),
-                                  ),
+                                  // IconButton(
+                                  //   onPressed: () {},
+                                  //   icon: const Icon(Icons.attach_file),
+                                  // ),
                                   SizedBox(
                                     width: 5,
                                   ),
@@ -132,21 +168,21 @@ class _AIChatScreenState extends State<AIChatScreen> {
   }
 }
 
-class AIChatBuilder extends StatelessWidget {
-  const AIChatBuilder({super.key});
+class expertChatBuilder extends StatelessWidget {
+  const expertChatBuilder({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final aiChatProvider = Provider.of<AIChatProvider>(context);
+    final expertChatProvider = Provider.of<ExpertChatProvider>(context);
 
     return Align(
       alignment: Alignment.bottomCenter,
       child: SizedBox(
-        height: 510,
+        height: 590,
         child: ListView.builder(
-          itemCount: aiChatProvider.messageHistory.length,
+          itemCount: expertChatProvider.messageHistory.length,
           itemBuilder: (context, index) {
-            final message = aiChatProvider.messageHistory[index];
+            final message = expertChatProvider.messageHistory[index];
 
             if (message['type'] == AppConstants.formCreateType) {
               final fields =
@@ -154,7 +190,7 @@ class AIChatBuilder extends StatelessWidget {
               return JsonForm(fields: fields);
             } else if (message['type'] == AppConstants.documentViewType) {
               return DocumentChatView(
-                  title: message['document_title'],
+                  docName: message['document_title'],
                   content: message['document_content']);
             } else {
               return TextMessageWidget(

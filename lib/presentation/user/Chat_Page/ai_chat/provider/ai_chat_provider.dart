@@ -11,25 +11,13 @@ class AIChatProvider extends ChangeNotifier {
     {
       'type': 'chat.message',
       'content': 'Hello',
-      'sender': 'ankur',
-      'is_from_sender': true,
-    },
-    {
-      'type': 'chat.message',
-      'content': 'Hii',
       'sender': 'AI',
       'is_from_sender': false,
     },
     {
       'type': 'chat.message',
-      'content': 'wyd',
-      'sender': 'ankur',
-      'is_from_sender': true,
-    },
-    {
-      'type': 'chat.message',
-      'content': 'Nothing',
-      'sender': 'ai',
+      'content': 'What can I do for you today?',
+      'sender': 'AI',
       'is_from_sender': false,
     },
   ];
